@@ -1,2 +1,2 @@
 # api.ginatours.com
-Ginatour API
+Ginatour Api
