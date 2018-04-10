@@ -6,3 +6,4 @@ Router::setRoute("/hotel/:action/*",array("module" => "mch_hotel","controller"=>
 Router::setRoute("/tour/:action/*",array("module" => "mch_tour","controller"=>"Tour"));
 Router::setRoute("/booking/:action/*",array("module" => "mch_booking","controller"=>"Booking"));
 Router::setRoute("/checker/:action/*",array("module" => "mch_checker","controller"=>"Checker"));
+Router::setRoute("/contact/:action/*",array("module" => "mch_contact","controller"=>"Contact"));

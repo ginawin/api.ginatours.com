@@ -26,7 +26,7 @@ class UserController extends Controller
             $iData = SBArray::removeNull($iData);
             
             if(isset($iData['user_pass']) && !empty($iData['user_pass']))
-                $iData['user_pass'] = Password::hash($iData['user_pass']);
+                $iData['user_pass'] = hash("sha256",PASSWORDPREFIX.$iData['user_pass']);
             $iData['updated_by'] = 1;
             if(empty($iData['user_id'])){
                 $iData['created_at'] = SBDate::Now2Str();

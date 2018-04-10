@@ -12,3 +12,4 @@ App::addModule('mch_tour');
 App::addModule('mch_booking');
 App::addModule('mch_user');
 App::addModule('mch_checker');
+App::addModule('mch_contact');
