@@ -60,10 +60,12 @@ class UserController extends Controller
             $oData = $this->UserClientUtil->execute("login",$iData,$this->user);
     
             if($oData !== false){
-                $token = hash("sha256", $oData['user_pass'].PREFIX.$oData['user_email']);
+                $token = hash("sha256", $oData['user_pass'].PASSWORDPREFIX.$oData['user_email']);
                 $_SESSION[$token]['time'] = new DateTime();
                 $_SESSION[$token]['user'] = $oData;
-                $this->res(1,array("token"=>$token));
+    
+                $oData['token'] = $token;
+                $this->res(1,$oData);
             }
         }
         $this->res(0,$oData);
