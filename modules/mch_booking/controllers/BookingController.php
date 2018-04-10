@@ -33,7 +33,7 @@ class BookingController extends Controller
 
             //process data
             //$data = $this->BookingUtil->create($req,$this->user);
-            $data = $this->BookingUtil->execute("create",$req);
+            $data = $this->BookingUtil->execute("create",$req,$this->user);
 
             //response
             $this->res(1,$data);
