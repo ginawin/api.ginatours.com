@@ -35,6 +35,12 @@ if ($versionCompare >= $version) {
 	echo ('We need PHP version >=' . $versionCompare->major().'.'.$versionCompare->minor());
 	exit();
 }*/
-
+if(!CACHE_FLG){
+    //php cache
+    opcache_reset();
+    apcu_clear_cache();
+}
 App::autoload();
+
+
 ?>
