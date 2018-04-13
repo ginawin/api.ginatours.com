@@ -20,7 +20,8 @@ class BookingController extends Controller
         
         
         if (Request::isPOST()) {
-            $req = $_POST;
+            $req = json_decode(file_get_contents("php://input"),true);
+            
             /*
             * @see: data is array. using post key and value.
             * @exam: key: user_email, key: user_password.
